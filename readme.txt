@@ -1,4 +1,4 @@
-=== Countdown Visibility Switcher ===
+=== Arreluna – Countdown Visibility Switcher ===
 Contributors: arreluna
 Tags: countdown, evergreen, timer, shortcode, visibility
 Requires at least: 6.0
