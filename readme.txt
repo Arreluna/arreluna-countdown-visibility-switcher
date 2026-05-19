@@ -1,12 +1,13 @@
 === Arreluna – Countdown Visibility Switcher ===
 Contributors: arreluna
-Tags: countdown, evergreen, timer, shortcode, visibility
+Tags: countdown, redirect, timer, shortcode, visibility
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Donate link: https://checkout.arreluna.com/acvs-donation/
 
 Create evergreen and fixed-date countdowns that switch content visibility or redirect visitors when they expire.
 
@@ -54,18 +55,18 @@ If you do not want to switch content, you can configure the countdown to redirec
 
 Example shortcode:
 
-`[evc_countdown id="123"]`
+`[acvs_countdown id="123"]`
 
 Example classes in show/hide mode:
 
-* `evc-before-123` shows content before the countdown expires.
-* `evc-after-123` shows content after the countdown expires.
+* `acvs-before-123` shows content before the countdown expires.
+* `acvs-after-123` shows content after the countdown expires.
 
 Example HTML:
 
-`<div class="evc-before-123">This content is visible before expiration.</div>`
+`<div class="acvs-before-123">This content is visible before expiration.</div>`
 
-`<div class="evc-after-123">This content is visible after expiration.</div>`
+`<div class="acvs-after-123">This content is visible after expiration.</div>`
 
 In page builders such as Elementor, Divi, Kadence Blocks, or the WordPress block editor, you usually only need to add the class name to the block, section, row, column, or button.
 
@@ -166,3 +167,8 @@ For evergreen countdowns, the plugin stores the expiration timestamp in the visi
 
 = 1.0.0 =
 * Initial public release.
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+Initial public release.

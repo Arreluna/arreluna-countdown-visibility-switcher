@@ -1,0 +1,54 @@
+.acvs-admin-table .acvs-section-row th,
+.acvs-admin-table .acvs-section-row td {
+	padding-top: 22px;
+	padding-bottom: 8px;
+	border-top: 1px solid #dcdcde;
+}
+.acvs-admin-section-title {
+	margin: 0;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: .02em;
+}
+.acvs-admin-inline-help {
+	max-width: 760px;
+	margin: 8px 0 0;
+	color: #646970;
+}
+.acvs-admin-table input[type="number"].small-text {
+	width: 72px;
+}
+.acvs-admin-unit-grid,
+.acvs-admin-label-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(110px, 1fr));
+	gap: 8px 12px;
+	max-width: 760px;
+}
+.acvs-admin-label-grid input {
+	width: 100%;
+}
+.acvs-usage-box input.code,
+.acvs-usage-box textarea.code {
+	font-size: 12px;
+}
+.acvs-usage-box .acvs-copy-field {
+	margin-bottom: 8px;
+}
+.acvs-admin-warning {
+	padding: 8px 10px;
+	border-left: 4px solid #d63638;
+	background: #fcf0f1;
+}
+.acvs-admin-info {
+	padding: 8px 10px;
+	border-left: 4px solid #72aee6;
+	background: #f0f6fc;
+}
+@media (max-width: 782px) {
+	.acvs-admin-unit-grid,
+	.acvs-admin-label-grid {
+		grid-template-columns: 1fr;
+	}
+}

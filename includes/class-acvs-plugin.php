@@ -3,16 +3,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class EVC_Plugin {
+class ACVS_Plugin {
 	public static function init() {
-		EVC_Post_Type::init();
-		EVC_Settings::init();
-		EVC_Shortcode::init();
-		EVC_Assets::init();
+		ACVS_Post_Type::init();
+		ACVS_Settings::init();
+		ACVS_Shortcode::init();
+		ACVS_Assets::init();
 	}
 
 	public static function activate() {
-		EVC_Post_Type::register_post_type();
+		ACVS_Post_Type::register_post_type();
 		flush_rewrite_rules();
 	}
 

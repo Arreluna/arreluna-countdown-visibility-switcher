@@ -76,9 +76,9 @@
 			seconds: seconds
 		};
 
-		container.querySelectorAll('[data-evc-unit]').forEach(function (unit) {
-			var key = unit.getAttribute('data-evc-unit');
-			var number = unit.querySelector('.evc-countdown__number');
+		container.querySelectorAll('[data-acvs-unit]').forEach(function (unit) {
+			var key = unit.getAttribute('data-acvs-unit');
+			var number = unit.querySelector('.acvs-countdown__number');
 			if (number && Object.prototype.hasOwnProperty.call(values, key)) {
 				number.textContent = pad(values[key]);
 			}
@@ -88,7 +88,7 @@
 	function initCountdown(container) {
 		var config;
 		try {
-			config = JSON.parse(container.getAttribute('data-evc-config'));
+			config = JSON.parse(container.getAttribute('data-acvs-config'));
 		} catch (error) {
 			return;
 		}
@@ -101,19 +101,19 @@
 
 			if (expired) {
 				remaining = 0;
-				container.classList.add('evc-countdown--expired');
+				container.classList.add('acvs-countdown--expired');
 				if (config.action === 'visibility') {
 					updateVisibility(config, true);
 				}
 				render(container, 0);
 
 				if (config.expiredDisplay === 'hide') {
-					container.classList.add('evc-countdown--hidden');
+					container.classList.add('acvs-countdown--hidden');
 				}
 
 				if (config.action === 'redirect' && config.redirectUrl) {
 					if (isCurrentUrl(config.redirectUrl)) {
-						container.classList.add('evc-countdown--hidden');
+						container.classList.add('acvs-countdown--hidden');
 						return false;
 					}
 
@@ -141,6 +141,6 @@
 	}
 
 	document.addEventListener('DOMContentLoaded', function () {
-		document.querySelectorAll('.evc-countdown[data-evc-config]').forEach(initCountdown);
+		document.querySelectorAll('.acvs-countdown[data-acvs-config]').forEach(initCountdown);
 	});
 }());
