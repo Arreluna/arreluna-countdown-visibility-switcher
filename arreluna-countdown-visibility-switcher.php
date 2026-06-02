@@ -6,6 +6,7 @@
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: Arreluna
+ * Plugin URI: https://arreluna.com/plugin/countdown-visibility-switcher/
  * Author URI: https://arreluna.com
  * Text Domain: arreluna-countdown-visibility-switcher
  * Domain Path: /languages
