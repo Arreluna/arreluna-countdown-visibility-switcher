@@ -1,12 +1,12 @@
 <?php
 /**
  * Plugin Name: Arreluna – Countdown Visibility Switcher
+ * Plugin URI: https://arreluna.com/plugin/countdown-visibility-switcher/
  * Description: Create evergreen or fixed-date countdowns and show, hide, or redirect content when they expire.
  * Version: 1.0.0
  * Requires at least: 6.0
  * Requires PHP: 7.4
  * Author: Arreluna
- * Plugin URI: https://arreluna.com/plugin/countdown-visibility-switcher/
  * Author URI: https://arreluna.com
  * Text Domain: arreluna-countdown-visibility-switcher
  * Domain Path: /languages
