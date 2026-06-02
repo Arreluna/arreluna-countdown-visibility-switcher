@@ -9,13 +9,14 @@ jobs:
   deploy:
     name: Deploy to WordPress.org SVN
     runs-on: ubuntu-latest
+    environment: wordpress.org
     steps:
       - uses: actions/checkout@v4
 
       - name: Deploy to WordPress.org
         uses: 10up/action-wordpress-plugin-deploy@stable
         env:
-          SVN_USERNAME: ${{ secrets.WPORG_USERNAME }}
+          SVN_USERNAME: ${{ secrets.WPORG_USER }}
           SVN_PASSWORD: ${{ secrets.WPORG_PASSWORD }}
           SLUG: arreluna-countdown-visibility-switcher
           ASSETS_DIR: .wordpress-org
