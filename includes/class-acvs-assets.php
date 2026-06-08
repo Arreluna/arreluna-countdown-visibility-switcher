@@ -22,13 +22,45 @@ class ACVS_Assets {
 		}
 
 		wp_enqueue_style( 'acvs-frontend' );
-		wp_enqueue_script( 'acvs-frontend' );
+
+		if ( ! self::is_builder_edit_mode() ) {
+			wp_enqueue_script( 'acvs-frontend' );
+		}
+
 		self::$enqueued = true;
 
 		if ( ! self::$inline_added ) {
-			wp_add_inline_style( 'acvs-frontend', self::inline_css() );
+			$inline = self::inline_css();
+			if ( self::is_builder_edit_mode() ) {
+				$inline .= '[class*="acvs-before-"],[class*="acvs-after-"]{display:block!important;}';
+			}
+			wp_add_inline_style( 'acvs-frontend', $inline );
 			self::$inline_added = true;
 		}
+	}
+
+	private static function is_builder_edit_mode(): bool {
+		// phpcs:disable WordPress.Security.NonceVerification.Recommended
+		$params = array(
+			'et_fb',             // Divi
+			'fl_builder',        // Beaver Builder
+			'brizy-edit',        // Brizy
+			'tve',               // Thrive Architect
+			'bricks',            // Bricks Builder
+			'ct_builder',        // Oxygen
+			'breakdance',        // Breakdance
+			'vc_editable',       // WPBakery
+			'elementor-preview', // Elementor preview
+			'zion-builder',      // Zion Builder
+			'seed_builder',      // SeedProd
+		);
+		// phpcs:enable
+		foreach ( $params as $param ) {
+			if ( isset( $_GET[ $param ] ) ) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public static function inline_css() {
