@@ -4,7 +4,7 @@ Tags: countdown, redirect, timer, shortcode, visibility
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Donate link: https://checkout.arreluna.com/acvs-donation/
@@ -165,10 +165,16 @@ For evergreen countdowns, the plugin stores the expiration timestamp in the visi
 
 == Changelog ==
 
+= 1.0.1 =
+* Show all before/after content in page builder edit modes (Elementor, Divi, Beaver Builder, and others).
+
 = 1.0.0 =
 * Initial public release.
 
 == Upgrade Notice ==
+
+= 1.0.1 =
+Fixes content visibility in page builder editors.
 
 = 1.0.0 =
 Initial public release.
